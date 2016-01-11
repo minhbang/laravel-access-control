@@ -1,0 +1,36 @@
+{
+    "name": "minhbang/laravel-access-control",
+    "description": "Laravel Access Control Package",
+    "keywords": [
+        "minhbang",
+        "laravel-access-control"
+    ],
+    "homepage": "https://github.com/minhbang/laravel-access-control",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Minh Bang",
+            "email": "contact@minhbang.com",
+            "homepage": "http://minhbang.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.1",
+        "illuminate/html": "5.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Minhbang\\AccessControl\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Minhbang\\AccessControl\\Test\\": "tests/"
+        }
+    }
+}
