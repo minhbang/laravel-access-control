@@ -25,15 +25,20 @@ class ServiceProvider extends BaseServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../views', 'access-control');
         $this->publishes(
             [
-                __DIR__ . '/../views'                                     => base_path('resources/views/vendor/access-control'),
-                __DIR__ . '/../lang'                                      => base_path('resources/lang/vendor/access-control'),
-                __DIR__ . '/../config/access-control.php'                 => config_path('access-control.php'),
+                __DIR__ . '/../views'                     => base_path('resources/views/vendor/access-control'),
+                __DIR__ . '/../lang'                      => base_path('resources/lang/vendor/access-control'),
+                __DIR__ . '/../config/access-control.php' => config_path('access-control.php'),
+
                 __DIR__ . '/../database/migrations/' .
-                '2014_11_05_000000_create_roles_table.php'                =>
-                    database_path('migrations/' . '2014_11_05_000000_create_roles_table.php'),
+                '2014_11_04_000000_create_role_groups_table.php'     => database_path('migrations/2014_11_04_000000_create_role_groups_table.php'),
                 __DIR__ . '/../database/migrations/' .
-                '2014_11_05_100000_create_password_permissions_table.php' =>
-                    database_path('migrations/' . '2014_11_05_100000_create_password_permissions_table.php'),
+                '2014_11_05_000000_create_roles_table.php'           => database_path('migrations/2014_11_05_000000_create_roles_table.php'),
+                __DIR__ . '/../database/migrations/' .
+                '2014_11_05_100000_create_role_user_table.php'       => database_path('migrations/2014_11_05_100000_create_role_user_table.php'),
+                __DIR__ . '/../database/migrations/' .
+                '2014_11_05_200000_create_permissions_table.php'     => database_path('migrations/2014_11_05_200000_create_permissions_table.php'),
+                __DIR__ . '/../database/migrations/' .
+                '2014_11_05_300000_create_permission_role_table.php' => database_path('migrations/2014_11_05_300000_create_permission_role_table.php'),
             ]
         );
 
